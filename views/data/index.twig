@@ -1,0 +1,14 @@
+{% extends '../layout.twig' %}
+ {% block content %}
+     {% for m in movies %}
+         <fieldset>
+             <legend>{{ m.titre }}</legend>
+             Pays: {{ m.pays }} <br>
+             Genre: {{ m.genre }}<br>
+             Realisateur: {{ m.Realisateur }}<br>
+             Sortie: {{ m.Sortie }}<br>
+             Durée :{{ m.Duree }}
+             <a href="/addfav/{{ m.titre }}">Ajouter aux favoris</a>
+         </fieldset>
+     {% endfor %}
+ {% endblock %}

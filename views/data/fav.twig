@@ -1,0 +1,13 @@
+{% extends '../layout.twig' %}
+ {% block content %}
+     <ul>
+         {% for m in fav %}
+             <li>
+                 {{ m.titre }} : <a href="/retirer/{{ m.titre }}">Retirer de ma list</a>
+             </li>
+         {% endfor %}
+     </ul>
+
+
+
+ {% endblock %}

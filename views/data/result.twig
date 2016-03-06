@@ -1,0 +1,20 @@
+{% extends '../layout.twig' %}
+ {% block content %}
+<form method="post" action="/search">
+    <div>
+        <input type="text" placeholder="Search" name="q">
+    </div>
+    <button type="submit">Search</button>
+</form>
+
+     {% for m in movies %}
+         <fieldset>
+             <legend>{{ m.titre }}</legend>
+             Pays: {{ m.pays }} <br>
+             Genre:  {{ m.genre }}<br>
+             Realisateur: {{ m.Realisateur }}<br>
+             Sortie: {{ m.Sortie }}<br>
+             Durée :{{ m.Duree }}
+         </fieldset>
+     {% endfor %}
+ {% endblock %}
